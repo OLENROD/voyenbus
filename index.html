@@ -1244,6 +1244,41 @@
 
   body.report-open { overflow: hidden; }
 
+  .report-callout {
+    background: rgba(45, 212, 212, 0.08);
+    border: 1px solid var(--accent);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0 18px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--text);
+  }
+  .report-callout strong { color: var(--accent); }
+
+  /* Priority cards in Tesis section */
+  .card-tesis-priority {
+    position: relative;
+    background: linear-gradient(160deg, var(--bg-card) 0%, rgba(45,212,212,0.04) 100%);
+    border-color: var(--accent);
+    box-shadow: inset 0 0 30px rgba(45,212,212,0.05);
+  }
+  .tesis-priority-badge {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: var(--accent);
+    color: #06090d;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(45,212,212,0.4);
+  }
+
   @media (max-width: 768px) {
     .report-cta { padding: 20px; }
     .report-cta-inner { gap: 14px; }
@@ -2624,16 +2659,16 @@
           </div>
         </div>
         <div class="stat">
-          <div class="stat-num">+130</div>
+          <div class="stat-num">★</div>
           <div class="stat-label">
-            <span data-lang="es" data-lang-active>Agencias de viajes</span>
-            <span data-lang="en">Travel agencies</span>
-            <span data-lang="pt">Agências de viagens</span>
+            <span data-lang="es" data-lang-active>Agencias corporativas</span>
+            <span data-lang="en">Corporate agencies</span>
+            <span data-lang="pt">Agências corporativas</span>
           </div>
           <div class="stat-sub">
-            <span data-lang="es" data-lang-active>en todo el mundo</span>
-            <span data-lang="en">worldwide</span>
-            <span data-lang="pt">em todo o mundo</span>
+            <span data-lang="es" data-lang-active>red consolidada</span>
+            <span data-lang="en">consolidated network</span>
+            <span data-lang="pt">rede consolidada</span>
           </div>
         </div>
         <div class="stat">
@@ -3495,6 +3530,10 @@
           <p data-lang="es" data-lang-active>El panorama competitivo se caracteriza por la expansión de actores globales en mercados emergentes y la consolidación de líderes regionales como Plataforma 10. Adquisiciones estratégicas, como la de Plataforma 10 por parte de Travelier (anteriormente Bookaway Group), están unificando el mercado y aprovechando plataformas tecnológicas centralizadas. La industria está evolucionando más allá de la simple reserva, incorporando tecnologías avanzadas como la inteligencia artificial para la previsión de la demanda y la fijación de precios dinámicos, y adoptando soluciones de viaje intermodal para mejorar la eficiencia y la experiencia del usuario.</p>
           <p data-lang="en">The competitive landscape is characterized by the expansion of global players into emerging markets and the consolidation of regional leaders like Plataforma 10. Strategic acquisitions, such as Plataforma 10 by Travelier (formerly Bookaway Group), are unifying the market and leveraging centralized technology platforms. The industry is evolving beyond simple booking, incorporating advanced technologies such as AI for demand forecasting and dynamic pricing, and adopting intermodal travel solutions to improve efficiency and user experience.</p>
           <p data-lang="pt">O cenário competitivo é caracterizado pela expansão de atores globais em mercados emergentes e pela consolidação de líderes regionais como a Plataforma 10. Aquisições estratégicas, como a da Plataforma 10 pela Travelier (anteriormente Bookaway Group), estão unificando o mercado e aproveitando plataformas tecnológicas centralizadas. A indústria está evoluindo além da simples reserva, incorporando tecnologias avançadas como inteligência artificial para previsão de demanda e precificação dinâmica, e adotando soluções de viagem intermodal para melhorar a eficiência e a experiência do usuário.</p>
+
+          <p data-lang="es" data-lang-active>Junto a Plataforma 10 destacan agregadores globales como <strong>Busbud</strong> y <strong>ClickBus</strong> (líder en Brasil), que han profesionalizado el canal digital de venta de pasajes. La irrupción de operadores tecnológicos como <strong>FlixBus</strong> en Sudamérica está acelerando los procesos de transformación digital de las empresas tradicionales y forzando un cambio de modelos comerciales: las compañías que antes operaban offline ahora deben adoptar plataformas, APIs, yield management e integraciones omnicanal para sobrevivir.</p>
+          <p data-lang="en">Alongside Plataforma 10, global aggregators such as <strong>Busbud</strong> and <strong>ClickBus</strong> (Brazilian leader) have professionalized the digital ticketing channel. The arrival of tech-driven operators like <strong>FlixBus</strong> in South America is accelerating the digital transformation of traditional companies and forcing a shift in commercial models: legacy offline operators now must adopt platforms, APIs, yield management and omnichannel integrations to survive.</p>
+          <p data-lang="pt">Ao lado da Plataforma 10 destacam-se agregadores globais como <strong>Busbud</strong> e <strong>ClickBus</strong> (líder no Brasil), que profissionalizaram o canal digital de venda de passagens. A chegada de operadores tecnológicos como <strong>FlixBus</strong> na América do Sul está acelerando os processos de transformação digital das empresas tradicionais e forçando uma mudança nos modelos comerciais: as companhias que antes operavam offline agora devem adotar plataformas, APIs, yield management e integrações omnicanal para sobreviver.</p>
         </section>
 
         <!-- 3.2 -->
@@ -3504,6 +3543,16 @@
             <span data-lang="en">3.2. Global Market Size</span>
             <span data-lang="pt">3.2. Tamanho Global do Mercado</span>
           </h3>
+          <div class="report-callout">
+            <strong>
+              <span data-lang="es" data-lang-active>📌 Aclaración sobre el alcance del mercado:</span>
+              <span data-lang="en">📌 Clarification on market scope:</span>
+              <span data-lang="pt">📌 Esclarecimento sobre o escopo do mercado:</span>
+            </strong>
+            <span data-lang="es" data-lang-active> las cifras de mercado abajo incluyen <strong>buses urbanos, de media distancia y de larga distancia</strong>, todos parte del proceso integral de digitalización del transporte terrestre de pasajeros. Voyenbus opera transversalmente sobre estos segmentos como herramienta de transformación digital de las empresas operadoras.</span>
+            <span data-lang="en"> the market figures below include <strong>urban, medium-distance and long-distance buses</strong>, all part of the comprehensive digitization process of ground passenger transport. Voyenbus operates transversally across these segments as a digital-transformation tool for operating companies.</span>
+            <span data-lang="pt"> as cifras de mercado abaixo incluem <strong>ônibus urbanos, de média distância e de longa distância</strong>, todos parte do processo integral de digitalização do transporte terrestre de passageiros. A Voyenbus opera transversalmente sobre esses segmentos como ferramenta de transformação digital das empresas operadoras.</span>
+          </div>
           <p data-lang="es" data-lang-active>El mercado global de boletos de transporte en línea ha mostrado un crecimiento significativo. En 2023, el valor del mercado global de boletos de transporte se estimó en USD 10.2 mil millones, con una proyección de crecimiento a USD 33 mil millones para 2032, lo que representa una Tasa de Crecimiento Anual Compuesta (CAGR) del 13.72% de 2024 a 2032. Otras estimaciones sitúan el mercado global de servicios de boletos de autobús en línea en aproximadamente USD 11.3 mil millones en 2023, con una previsión de alcanzar los USD 31.2 mil millones para 2033, creciendo a una CAGR del 10.5% de 2025 a 2033. Una tercera fuente valora el mercado de servicios de boletos de autobús en línea en USD 5.22 mil millones en 2023, proyectando un aumento a USD 6.15 mil millones en 2024 y un crecimiento a una CAGR del 18.07% para alcanzar USD 16.70 mil millones para 2030.</p>
           <p data-lang="en">The global online transportation ticketing market has shown significant growth. In 2023, the global transportation ticket market value was estimated at USD 10.2 billion, with a projected growth to USD 33 billion by 2032, representing a Compound Annual Growth Rate (CAGR) of 13.72% from 2024 to 2032. Other estimates place the global online bus ticketing services market at approximately USD 11.3 billion in 2023, with a forecast to reach USD 31.2 billion by 2033, growing at a CAGR of 10.5% from 2025 to 2033. A third source values the online bus ticketing services market at USD 5.22 billion in 2023, projecting an increase to USD 6.15 billion in 2024 and growth at a CAGR of 18.07% to reach USD 16.70 billion by 2030.</p>
           <p data-lang="pt">O mercado global de bilhetes de transporte online tem mostrado crescimento significativo. Em 2023, o valor do mercado global de bilhetes de transporte foi estimado em USD 10,2 bilhões, com projeção de crescimento para USD 33 bilhões até 2032, representando uma Taxa de Crescimento Anual Composta (CAGR) de 13,72% de 2024 a 2032. Outras estimativas situam o mercado global de serviços de bilhetes de ônibus online em aproximadamente USD 11,3 bilhões em 2023, com previsão de atingir USD 31,2 bilhões até 2033, crescendo a uma CAGR de 10,5% de 2025 a 2033. Uma terceira fonte avalia o mercado de serviços de bilhetes de ônibus online em USD 5,22 bilhões em 2023, projetando um aumento para USD 6,15 bilhões em 2024 e crescimento a uma CAGR de 18,07% para atingir USD 16,70 bilhões até 2030.</p>
@@ -3722,9 +3771,18 @@
             <span data-lang="en">3.6. Competitive Landscape in Argentina</span>
             <span data-lang="pt">3.6. Cenário Competitivo na Argentina</span>
           </h3>
-          <p data-lang="es" data-lang-active>Plataforma 10 es "la marca líder de transporte en línea de Argentina". Atiende a Argentina, Bolivia, Brasil, Chile, Paraguay, Perú y Uruguay. Se asocia con más de 400 compañías de autobuses en LatAm y vende boletos a través de su sitio web, agencias de viajes y más de 2,000 tiendas y quioscos locales. Otras plataformas en Argentina incluyen Omnilineas, y compañías locales como Via Tac, Flechabus y Andesmar. A junio de 2025, los ingresos anuales de Plataforma 10 alcanzaron los <strong>USD 15 millones</strong>.</p>
-          <p data-lang="en">Plataforma 10 is "Argentina's leading online transportation brand". It serves Argentina, Bolivia, Brazil, Chile, Paraguay, Peru and Uruguay. It partners with over 400 bus companies in LatAm and sells tickets through its website, travel agencies and 2,000+ local stores and kiosks. Other platforms in Argentina include Omnilineas, and local companies such as Via Tac, Flechabus and Andesmar. As of June 2025, Plataforma 10's annual revenue reached <strong>USD 15 million</strong>.</p>
-          <p data-lang="pt">A Plataforma 10 é "a marca líder de transporte online da Argentina". Atende Argentina, Bolívia, Brasil, Chile, Paraguai, Peru e Uruguai. Faz parceria com mais de 400 empresas de ônibus na América Latina e vende bilhetes através de seu site, agências de viagens e mais de 2.000 lojas e quiosques locais. Outras plataformas na Argentina incluem a Omnilineas e empresas locais como Via Tac, Flechabus e Andesmar. Em junho de 2025, a receita anual da Plataforma 10 atingiu <strong>USD 15 milhões</strong>.</p>
+          <p data-lang="es" data-lang-active>Plataforma 10 es "la marca líder de transporte en línea de Argentina". Atiende a Argentina, Bolivia, Brasil, Chile, Paraguay, Perú y Uruguay. Comercializa el inventario de prácticamente todas las empresas argentinas (incluida <strong>Via Bariloche</strong>), excepto los servicios puros del Grupo Flecha. Vende a través de su sitio web, agencias de viajes y más de 2,000 tiendas y quioscos locales. Otras compañías locales con presencia online incluyen Via Tac, <strong>Plusmar</strong> y Andesmar. A junio de 2025, los ingresos anuales de Plataforma 10 alcanzaron los <strong>USD 15 millones</strong>.</p>
+          <p data-lang="en">Plataforma 10 is "Argentina's leading online transportation brand". It serves Argentina, Bolivia, Brazil, Chile, Paraguay, Peru and Uruguay. It commercializes the inventory of virtually every Argentine bus company (including <strong>Via Bariloche</strong>), except the pure services of the Flecha Group. It sells through its website, travel agencies and 2,000+ local stores and kiosks. Other local companies with online presence include Via Tac, <strong>Plusmar</strong> and Andesmar. As of June 2025, Plataforma 10's annual revenue reached <strong>USD 15 million</strong>.</p>
+          <p data-lang="pt">A Plataforma 10 é "a marca líder de transporte online da Argentina". Atende Argentina, Bolívia, Brasil, Chile, Paraguai, Peru e Uruguai. Comercializa o inventário de praticamente todas as empresas argentinas (incluindo <strong>Via Bariloche</strong>), exceto os serviços puros do Grupo Flecha. Vende através de seu site, agências de viagens e mais de 2.000 lojas e quiosques locais. Outras empresas locais com presença online incluem Via Tac, <strong>Plusmar</strong> e Andesmar. Em junho de 2025, a receita anual da Plataforma 10 atingiu <strong>USD 15 milhões</strong>.</p>
+
+          <h4 class="report-subhead">
+            <span data-lang="es" data-lang-active>Central de Pasajes — el competidor más fuerte</span>
+            <span data-lang="en">Central de Pasajes — the strongest competitor</span>
+            <span data-lang="pt">Central de Pasajes — o concorrente mais forte</span>
+          </h4>
+          <p data-lang="es" data-lang-active><strong>Central de Pasajes</strong> es la comercializadora online del <strong>Grupo Flecha Bus</strong> y representa el competidor más fuerte de Plataforma 10 en el mercado argentino. Comercializa el inventario de todas las empresas <em>excepto</em> Via Bariloche (la única que no integra). Su volumen de ventas es estimado en <strong>4 a 5 veces el de Voyenbus</strong>, lo que la consolida como un actor regional de primer nivel. Junto a Plataforma 10 y Central de Pasajes, el mercado argentino de venta digital de pasajes está dominado por estos dos jugadores; Voyenbus se posiciona como la <strong>tercera fuerza</strong> con un foco diferencial en transformación digital de operadores.</p>
+          <p data-lang="en"><strong>Central de Pasajes</strong> is the online sales platform of the <strong>Flecha Bus Group</strong> and represents Plataforma 10's strongest competitor in the Argentine market. It commercializes the inventory of every operator <em>except</em> Via Bariloche (the only one not integrated). Its sales volume is estimated at <strong>4 to 5x Voyenbus's</strong>, consolidating it as a top-tier regional player. Together with Plataforma 10 and Central de Pasajes, these two dominate Argentina's digital ticketing market; Voyenbus positions itself as the <strong>third force</strong> with a differential focus on the digital transformation of operators.</p>
+          <p data-lang="pt"><strong>Central de Pasajes</strong> é a comercializadora online do <strong>Grupo Flecha Bus</strong> e representa o concorrente mais forte da Plataforma 10 no mercado argentino. Comercializa o inventário de todas as empresas <em>exceto</em> Via Bariloche (a única não integrada). Seu volume de vendas é estimado em <strong>4 a 5 vezes o da Voyenbus</strong>, consolidando-a como um player regional de primeiro nível. Juntamente com Plataforma 10 e Central de Pasajes, o mercado argentino de venda digital de passagens é dominado por esses dois jogadores; a Voyenbus se posiciona como a <strong>terceira força</strong>, com foco diferencial na transformação digital de operadores.</p>
 
           <p data-lang="es" data-lang-active>La estrategia híbrida de Plataforma 10 (web + app + 2,000 tiendas físicas) es una ventaja crucial en mercados donde la penetración digital aún se desarrolla. Este modelo cierra la brecha entre conveniencia digital y comportamientos tradicionales, ampliando el alcance más allá de usuarios puramente online.</p>
           <p data-lang="en">Plataforma 10's hybrid strategy (web + app + 2,000 physical stores) is a crucial advantage in markets where digital penetration is still developing. This model bridges the gap between digital convenience and traditional behaviors, broadening reach beyond purely online users.</p>
@@ -3796,6 +3854,42 @@
                   </td>
                 </tr>
                 <tr>
+                  <td><strong>Busbud</strong></td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Global</span>
+                    <span data-lang="en">Global</span>
+                    <span data-lang="pt">Global</span>
+                  </td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Norteamérica, Europa, LatAm</span>
+                    <span data-lang="en">North America, Europe, LatAm</span>
+                    <span data-lang="pt">América do Norte, Europa, LatAm</span>
+                  </td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Agregador OTA con foco en cobertura intermodal</span>
+                    <span data-lang="en">OTA aggregator with intermodal coverage focus</span>
+                    <span data-lang="pt">Agregador OTA com foco em cobertura intermodal</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>ClickBus</strong></td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Regional</span>
+                    <span data-lang="en">Regional</span>
+                    <span data-lang="pt">Regional</span>
+                  </td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Brasil (líder), México</span>
+                    <span data-lang="en">Brazil (leader), Mexico</span>
+                    <span data-lang="pt">Brasil (líder), México</span>
+                  </td>
+                  <td>
+                    <span data-lang="es" data-lang-active>Líder digital del mercado brasileño, mobile-first</span>
+                    <span data-lang="en">Digital leader in Brazilian market, mobile-first</span>
+                    <span data-lang="pt">Líder digital do mercado brasileiro, mobile-first</span>
+                  </td>
+                </tr>
+                <tr>
                   <td><strong>Plataforma 10</strong></td>
                   <td>
                     <span data-lang="es" data-lang-active>Regional</span>
@@ -3814,7 +3908,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Omnilineas</strong></td>
+                  <td><strong>Central de Pasajes</strong></td>
                   <td>
                     <span data-lang="es" data-lang-active>Regional</span>
                     <span data-lang="en">Regional</span>
@@ -3822,13 +3916,13 @@
                   </td>
                   <td>Argentina</td>
                   <td>
-                    <span data-lang="es" data-lang-active>Reserva online, enfoque en turistas</span>
-                    <span data-lang="en">Online booking, tourist focus</span>
-                    <span data-lang="pt">Reserva online, foco em turistas</span>
+                    <span data-lang="es" data-lang-active>Comercializadora del Grupo Flecha Bus, ~4-5x volumen vs. Voyenbus, todas las empresas excepto Via Bariloche</span>
+                    <span data-lang="en">Flecha Bus Group's online platform, ~4-5x Voyenbus volume, all operators except Via Bariloche</span>
+                    <span data-lang="pt">Plataforma online do Grupo Flecha Bus, ~4-5x volume da Voyenbus, todas as empresas exceto Via Bariloche</span>
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Via Tac, Flechabus, Andesmar</strong></td>
+                  <td><strong>Via Tac, Plusmar, Andesmar</strong></td>
                   <td>
                     <span data-lang="es" data-lang-active>Local</span>
                     <span data-lang="en">Local</span>
@@ -3995,9 +4089,9 @@
                 <span data-lang="en">Serviceable Available Market</span>
                 <span data-lang="pt">Mercado Servível Disponível</span>
               </h4>
-              <p data-lang="es" data-lang-active>Porción accesible con el modelo actual (B2C + B2B) y red de +85 operadores y +130 agencias. Mercados activos: Argentina, Brasil, Chile, Uruguay, Paraguay. La integración con GDS y Google Transit amplía el SAM vía canales de terceros.</p>
-              <p data-lang="en">Portion accessible with the current model (B2C + B2B) and +85 operator / +130 agency network. Active markets: Argentina, Brazil, Chile, Uruguay, Paraguay. Integration with GDS and Google Transit broadens the SAM via third-party channels.</p>
-              <p data-lang="pt">Porção acessível com o modelo atual (B2C + B2B) e rede de +85 operadores e +130 agências. Mercados ativos: Argentina, Brasil, Chile, Uruguai, Paraguai. A integração com GDS e Google Transit amplia o SAM via canais de terceiros.</p>
+              <p data-lang="es" data-lang-active>Porción accesible con el modelo actual (B2C + B2B + B2B2C) y red de +85 operadores y agencias corporativas. Mercados activos: Argentina, Brasil, Chile, Uruguay, Paraguay. La integración con GDS y Google Transit amplía el SAM vía canales de terceros.</p>
+              <p data-lang="en">Portion accessible with the current model (B2C + B2B + B2B2C) and +85 operators plus corporate agency network. Active markets: Argentina, Brazil, Chile, Uruguay, Paraguay. Integration with GDS and Google Transit broadens the SAM via third-party channels.</p>
+              <p data-lang="pt">Porção acessível com o modelo atual (B2C + B2B + B2B2C) e rede de +85 operadores e agências corporativas. Mercados ativos: Argentina, Brasil, Chile, Uruguai, Paraguai. A integração com GDS e Google Transit amplia o SAM via canais de terceiros.</p>
             </div>
 
             <div class="tam-card">
@@ -4007,9 +4101,9 @@
                 <span data-lang="en">Serviceable Obtainable Market</span>
                 <span data-lang="pt">Mercado Servível Obtível</span>
               </h4>
-              <p data-lang="es" data-lang-active>Porción realista capturable a corto/mediano plazo. Voyenbus tiene posición significativa en Argentina. Proyección: 500K tickets anuales, GMV USD 7M–10M, ingresos USD 700K–1M (comisión media 10%). Expansión y optimización B2B/B2C aumentarán el SOM.</p>
-              <p data-lang="en">Realistic short/medium-term capturable portion. Voyenbus has significant position in Argentina. Projection: 500K annual tickets, GMV USD 7M–10M, revenue USD 700K–1M (10% avg. commission). Expansion and B2B/B2C optimization will grow the SOM.</p>
-              <p data-lang="pt">Porção realista capturável a curto/médio prazo. A Voyenbus tem posição significativa na Argentina. Projeção: 500 mil bilhetes anuais, GMV USD 7M–10M, receita USD 700K–1M (comissão média 10%). Expansão e otimização B2B/B2C aumentarão o SOM.</p>
+              <p data-lang="es" data-lang-active>Porción realista capturable a corto/mediano plazo. Voyenbus tiene posición significativa en Argentina. Volumen actual cercano a <strong>USD 20M anuales</strong> entre todos los canales (B2C, B2B y B2B2C). Expansión vía soluciones de transformación digital aumentarán el SOM.</p>
+              <p data-lang="en">Realistic short/medium-term capturable portion. Voyenbus has significant position in Argentina. Current volume of approximately <strong>USD 20M annually</strong> across all channels (B2C, B2B and B2B2C). Expansion via digital-transformation solutions will grow the SOM.</p>
+              <p data-lang="pt">Porção realista capturável a curto/médio prazo. A Voyenbus tem posição significativa na Argentina. Volume atual de aproximadamente <strong>USD 20M anuais</strong> entre todos os canais (B2C, B2B e B2B2C). Expansão via soluções de transformação digital aumentarão o SOM.</p>
             </div>
           </div>
         </section>
@@ -4146,6 +4240,45 @@
       </div>
 
       <div class="grid grid-2">
+        <div class="card card-feature card-tesis-priority">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <div class="tesis-priority-badge">★</div>
+          <h4>
+            <span data-lang="es" data-lang-active>Herramienta B2B2C de Transformación Digital</span>
+            <span data-lang="en">B2B2C Digital Transformation Tool</span>
+            <span data-lang="pt">Ferramenta B2B2C de Transformação Digital</span>
+          </h4>
+          <p data-lang="es" data-lang-active><strong>Voyenbus se diferencia como motor B2B2C:</strong> entrega a las empresas de transporte sus propias webs, apps y herramientas (TOLWEB, TOLPOS, TOL API) para que vendan online bajo su marca. No es solo un canal de venta — es la plataforma de transformación digital integral del operador. Esta capacidad directa de digitalizar a la empresa es la razón estratégica más fuerte para adquirir Voyenbus.</p>
+          <p data-lang="en"><strong>Voyenbus stands out as a B2B2C engine:</strong> it delivers transport companies their own websites, apps and tools (TOLWEB, TOLPOS, TOL API) to sell online under their own brand. It's not just a sales channel — it's the operator's integral digital-transformation platform. This direct ability to digitize the operator is the strongest strategic reason to acquire Voyenbus.</p>
+          <p data-lang="pt"><strong>A Voyenbus se diferencia como motor B2B2C:</strong> entrega às empresas de transporte seus próprios sites, aplicativos e ferramentas (TOLWEB, TOLPOS, TOL API) para que vendam online sob sua marca. Não é apenas um canal de vendas — é a plataforma integral de transformação digital do operador. Essa capacidade direta de digitalizar a empresa é a razão estratégica mais forte para adquirir a Voyenbus.</p>
+        </div>
+
+        <div class="card card-feature card-tesis-priority">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg></div>
+          <div class="tesis-priority-badge">★</div>
+          <h4>
+            <span data-lang="es" data-lang-active>Bloqueo de Entrada a la Competencia</span>
+            <span data-lang="en">Block Competitor Market Entry</span>
+            <span data-lang="pt">Bloqueio da Entrada de Concorrentes</span>
+          </h4>
+          <p data-lang="es" data-lang-active>Adquirir Voyenbus implica <strong>cerrarle la puerta a otros players globales</strong> que buscarían entrar al mercado argentino y latinoamericano de transformación digital del transporte. Su red establecida con +85 operadores, su tecnología propia y su posicionamiento como tercera fuerza (detrás de Plataforma 10 y Central de Pasajes) la convierten en un activo defensivo de alto valor.</p>
+          <p data-lang="en">Acquiring Voyenbus means <strong>closing the door on other global players</strong> looking to enter the Argentine and Latin American digital-transformation transport market. Its established network of +85 operators, proprietary technology and positioning as the third force (behind Plataforma 10 and Central de Pasajes) make it a high-value defensive asset.</p>
+          <p data-lang="pt">Adquirir a Voyenbus implica <strong>fechar a porta a outros players globais</strong> que buscariam entrar no mercado argentino e latino-americano de transformação digital do transporte. Sua rede estabelecida com +85 operadores, sua tecnologia própria e seu posicionamento como terceira força (atrás de Plataforma 10 e Central de Pasajes) a transformam em um ativo defensivo de alto valor.</p>
+        </div>
+
+        <div class="card card-feature card-tesis-priority">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
+          <div class="tesis-priority-badge">★</div>
+          <h4>
+            <span data-lang="es" data-lang-active>Inteligencia Artificial Avanzada</span>
+            <span data-lang="en">Advanced Artificial Intelligence</span>
+            <span data-lang="pt">Inteligência Artificial Avançada</span>
+          </h4>
+          <p data-lang="es" data-lang-active>Voyenbus está trabajando <strong>muy fuerte con IA</strong> en tableros de analítica con <strong>agentes que dan consejos, hacen estadística y predicción</strong>. Aplicación intensiva en atención al cliente (pre y post-viaje), control de fraude y soporte. Posición destacada en IA aplicada al transporte que pocas plataformas de la región pueden igualar — un activo estratégico de cara al futuro del sector.</p>
+          <p data-lang="en">Voyenbus is investing <strong>heavily in AI</strong> for analytics dashboards with <strong>agents that provide advice, run statistics and predictions</strong>. Intensive application in customer service (pre- and post-trip), fraud control and support. Strong AI position applied to transportation that few regional platforms can match — a strategic asset for the sector's future.</p>
+          <p data-lang="pt">A Voyenbus está investindo <strong>fortemente em IA</strong> em painéis analíticos com <strong>agentes que dão conselhos, fazem estatística e previsão</strong>. Aplicação intensiva em atendimento ao cliente (pré e pós-viagem), controle de fraude e suporte. Posição destacada em IA aplicada ao transporte que poucas plataformas regionais podem igualar — um ativo estratégico para o futuro do setor.</p>
+        </div>
+
         <div class="card card-feature">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
           <h4>
@@ -4153,10 +4286,11 @@
             <span data-lang="en">Access to Advanced Technology</span>
             <span data-lang="pt">Acesso a Tecnologia Avançada</span>
           </h4>
-          <p data-lang="es" data-lang-active>Pila tecnológica B2B/B2C madura, APIs robustas, capacidades de Yield Management probadas en producción. Stack: Java, PHP, Ruby, integraciones Sabre y Google.</p>
-          <p data-lang="en">Mature B2B/B2C technology stack, robust APIs, Yield Management capabilities proven in production. Stack: Java, PHP, Ruby, Sabre and Google integrations.</p>
-          <p data-lang="pt">Stack tecnológico B2B/B2C maduro, APIs robustas, capacidades de Yield Management comprovadas em produção. Stack: Java, PHP, Ruby, integrações Sabre e Google.</p>
+          <p data-lang="es" data-lang-active>Pila tecnológica B2C/B2B/B2B2C madura, APIs robustas, B.I. con IA y automatización de procesos. Stack: Java, PHP, Ruby, integraciones Sabre y Google. Foco principal en el mercado local argentino con escalamiento regional.</p>
+          <p data-lang="en">Mature B2C/B2B/B2B2C technology stack, robust APIs, AI-powered B.I. and process automation. Stack: Java, PHP, Ruby, Sabre and Google integrations. Primary focus on the local Argentine market with regional scaling.</p>
+          <p data-lang="pt">Stack tecnológico B2C/B2B/B2B2C maduro, APIs robustas, B.I. com IA e automação de processos. Stack: Java, PHP, Ruby, integrações Sabre e Google. Foco principal no mercado local argentino com escalamento regional.</p>
         </div>
+
         <div class="card card-feature">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
           <h4>
@@ -4164,21 +4298,11 @@
             <span data-lang="en">Immediate Expansion</span>
             <span data-lang="pt">Expansão Imediata</span>
           </h4>
-          <p data-lang="es" data-lang-active>Integración a una red establecida en mercados clave de LatAm. +85 operadores, +130 agencias, presencia en Argentina, Brasil, Chile, Uruguay, Perú, Colombia, México y la Unión Europea.</p>
-          <p data-lang="en">Integration into an established network in key LatAm markets. +85 operators, +130 agencies, presence in Argentina, Brazil, Chile, Uruguay, Peru, Colombia, Mexico and the European Union.</p>
-          <p data-lang="pt">Integração a uma rede estabelecida em mercados-chave da América Latina. +85 operadores, +130 agências, presença em Argentina, Brasil, Chile, Uruguai, Peru, Colômbia, México e União Europeia.</p>
+          <p data-lang="es" data-lang-active>Integración a una red establecida con foco principal en Argentina y presencia activa en Brasil, Chile, Uruguay, Paraguay. +85 operadores, red de agencias corporativas, distribución global a EU/EEUU vía GDS.</p>
+          <p data-lang="en">Integration into an established network with primary focus on Argentina and active presence in Brazil, Chile, Uruguay, Paraguay. +85 operators, corporate agency network, global distribution to EU/US via GDS.</p>
+          <p data-lang="pt">Integração a uma rede estabelecida com foco principal na Argentina e presença ativa em Brasil, Chile, Uruguai, Paraguai. +85 operadores, rede de agências corporativas, distribuição global para UE/EUA via GDS.</p>
         </div>
-        <div class="card card-feature">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <h4>
-            <span data-lang="es" data-lang-active>Capitalización del Crecimiento</span>
-            <span data-lang="en">Growth Capitalization</span>
-            <span data-lang="pt">Capitalização do Crescimento</span>
-          </h4>
-          <p data-lang="es" data-lang-active>Posicionamiento ideal para aprovechar la digitalización del transporte terrestre, aún en fase inicial en muchos países LatAm. Ventana de captura de mercado abierta.</p>
-          <p data-lang="en">Ideal positioning to capitalize on the digitization of ground transportation, still in early stage in many LatAm countries. Market capture window is open.</p>
-          <p data-lang="pt">Posicionamento ideal para aproveitar a digitalização do transporte terrestre, ainda em fase inicial em muitos países da América Latina. Janela de captura de mercado aberta.</p>
-        </div>
+
         <div class="card card-feature">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
           <h4>
@@ -4186,9 +4310,9 @@
             <span data-lang="en">Operational Maturity</span>
             <span data-lang="pt">Maturidade Operacional</span>
           </h4>
-          <p data-lang="es" data-lang-active>Procesos robustos avalados por la certificación ISO 9001:2015. Equipo experimentado (+20 años), reputación sólida, baja deuda y track record de transacciones procesadas.</p>
-          <p data-lang="en">Robust processes backed by ISO 9001:2015 certification. Experienced team (+20 years), solid reputation, low debt and a proven track record of processed transactions.</p>
-          <p data-lang="pt">Processos robustos avalizados pela certificação ISO 9001:2015. Equipe experiente (+20 anos), reputação sólida, baixa dívida e histórico de transações processadas.</p>
+          <p data-lang="es" data-lang-active>Procesos robustos avalados por la certificación ISO 9001:2015. Equipo experimentado (+20 años), reputación sólida, baja deuda y track record de transacciones procesadas. Volumen anual cercano a USD 20M entre todos los canales.</p>
+          <p data-lang="en">Robust processes backed by ISO 9001:2015 certification. Experienced team (+20 years), solid reputation, low debt and a proven track record of processed transactions. Annual volume near USD 20M across all channels.</p>
+          <p data-lang="pt">Processos robustos avalizados pela certificação ISO 9001:2015. Equipe experiente (+20 anos), reputação sólida, baixa dívida e histórico de transações processadas. Volume anual próximo a USD 20M em todos os canais.</p>
         </div>
       </div>
     </div>
@@ -4546,16 +4670,16 @@
           </div>
         </div>
         <div class="metric-card">
-          <div class="metric-num">500K</div>
+          <div class="metric-num">USD 20M</div>
           <div class="metric-unit">
-            <span data-lang="es" data-lang-active>tickets/año</span>
-            <span data-lang="en">tickets/year</span>
-            <span data-lang="pt">bilhetes/ano</span>
+            <span data-lang="es" data-lang-active>ventas/año</span>
+            <span data-lang="en">sales/year</span>
+            <span data-lang="pt">vendas/ano</span>
           </div>
           <div class="metric-label">
-            <span data-lang="es" data-lang-active>Volumen anual estimado</span>
-            <span data-lang="en">Estimated annual volume</span>
-            <span data-lang="pt">Volume anual estimado</span>
+            <span data-lang="es" data-lang-active>Volumen entre todos los canales</span>
+            <span data-lang="en">Volume across all channels</span>
+            <span data-lang="pt">Volume entre todos os canais</span>
           </div>
         </div>
         <div class="metric-card">
@@ -4572,16 +4696,16 @@
           </div>
         </div>
         <div class="metric-card">
-          <div class="metric-num">36</div>
+          <div class="metric-num" style="font-size:32px;">★</div>
           <div class="metric-unit">
-            <span data-lang="es" data-lang-active>agencias</span>
-            <span data-lang="en">agencies</span>
-            <span data-lang="pt">agências</span>
+            <span data-lang="es" data-lang-active>corporativas</span>
+            <span data-lang="en">corporate</span>
+            <span data-lang="pt">corporativas</span>
           </div>
           <div class="metric-label">
-            <span data-lang="es" data-lang-active>Agencias de viaje socias</span>
-            <span data-lang="en">Travel agency partners</span>
-            <span data-lang="pt">Agências de viagem parceiras</span>
+            <span data-lang="es" data-lang-active>Red de agencias corporativas</span>
+            <span data-lang="en">Corporate agency network</span>
+            <span data-lang="pt">Rede de agências corporativas</span>
           </div>
         </div>
         <div class="metric-card">
@@ -4607,26 +4731,29 @@
       </h3>
       <div class="grid grid-3">
         <div class="card" style="text-align:center;">
-          <div class="big-num">USD 7M – 10M</div>
-          <h4>GMV
-            <span data-lang="es" data-lang-active style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Volumen Bruto de Mercadería</span>
-            <span data-lang="en" style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Gross Merchandise Value</span>
-            <span data-lang="pt" style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Volume Bruto de Mercadoria</span>
+          <div class="big-num">USD 20M</div>
+          <h4>
+            <span data-lang="es" data-lang-active>Ventas totales/año</span>
+            <span data-lang="en">Total sales/year</span>
+            <span data-lang="pt">Vendas totais/ano</span>
+            <span data-lang="es" data-lang-active style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Entre todos los canales</span>
+            <span data-lang="en" style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Across all channels</span>
+            <span data-lang="pt" style="display:block; color: var(--text-muted); font-size: 12px; letter-spacing: 1px; margin-top: 4px;">Entre todos os canais</span>
           </h4>
-          <p data-lang="es" data-lang-active>Volumen bruto anual estimado de transacciones procesadas a través de la plataforma.</p>
-          <p data-lang="en">Estimated annual gross volume of transactions processed through the platform.</p>
-          <p data-lang="pt">Volume bruto anual estimado de transações processadas através da plataforma.</p>
+          <p data-lang="es" data-lang-active>Volumen anual de ventas combinando los canales B2C, B2B y B2B2C de la plataforma.</p>
+          <p data-lang="en">Annual sales volume combining the platform's B2C, B2B and B2B2C channels.</p>
+          <p data-lang="pt">Volume anual de vendas combinando os canais B2C, B2B e B2B2C da plataforma.</p>
         </div>
         <div class="card" style="text-align:center;">
-          <div class="big-num">USD 700K – 1M</div>
+          <div class="big-num">10%</div>
           <h4>
-            <span data-lang="es" data-lang-active>Ingresos / año</span>
-            <span data-lang="en">Revenue / year</span>
-            <span data-lang="pt">Receita / ano</span>
+            <span data-lang="es" data-lang-active>Comisión media</span>
+            <span data-lang="en">Average commission</span>
+            <span data-lang="pt">Comissão média</span>
           </h4>
-          <p data-lang="es" data-lang-active>Ingresos anuales estimados a partir del GMV y la comisión media del 10%.</p>
-          <p data-lang="en">Annual revenue estimated from GMV and the 10% average commission.</p>
-          <p data-lang="pt">Receita anual estimada a partir do GMV e da comissão média de 10%.</p>
+          <p data-lang="es" data-lang-active>Comisión media por transacción sobre el canal B2C, complementada por licencias SaaS B2B.</p>
+          <p data-lang="en">Average commission per transaction on the B2C channel, complemented by B2B SaaS licenses.</p>
+          <p data-lang="pt">Comissão média por transação no canal B2C, complementada por licenças SaaS B2B.</p>
         </div>
         <div class="card" style="text-align:center;">
           <div class="big-num">USD 6.7M</div>
@@ -5229,9 +5356,9 @@
       </div>
       <div class="report-modal-body">
         <section class="report-section">
-          <p data-lang="es" data-lang-active>Este memorándum presenta un análisis integral de la valuación de Voyenbus S.A., una plataforma digital consolidada en el sector de servicios de movilidad y autobuses interurbanos en América Latina. Fundada en 2004, la compañía opera bajo un modelo de negocio dual (B2C y B2B) y cuenta con una robusta infraestructura tecnológica propietaria, lo que le ha permitido sostener operaciones en mercados clave de la región.</p>
-          <p data-lang="en">This memorandum presents a comprehensive valuation analysis of Voyenbus S.A., a consolidated digital platform in the Latin American mobility and interurban bus services sector. Founded in 2004, the company operates a dual business model (B2C and B2B) backed by robust proprietary technology infrastructure, sustaining operations in key regional markets.</p>
-          <p data-lang="pt">Este memorando apresenta uma análise integral da avaliação da Voyenbus S.A., uma plataforma digital consolidada no setor de serviços de mobilidade e ônibus interurbanos na América Latina. Fundada em 2004, a empresa opera um modelo de negócio dual (B2C e B2B) e conta com uma robusta infraestrutura tecnológica proprietária, sustentando operações em mercados-chave da região.</p>
+          <p data-lang="es" data-lang-active>Este memorándum presenta un análisis integral de la valuación de Voyenbus S.A., una plataforma digital consolidada en el sector de servicios de movilidad y autobuses interurbanos. Fundada en 2004, la compañía está <strong>principalmente enfocada en el mercado local argentino</strong>, donde opera un modelo triple (B2C, B2B y B2B2C) que la posiciona como <strong>solución de transformación digital integral para empresas de transporte</strong>. Cuenta con una robusta infraestructura tecnológica propietaria, automatización de procesos e inversión activa en Inteligencia Artificial.</p>
+          <p data-lang="en">This memorandum presents a comprehensive valuation analysis of Voyenbus S.A., a consolidated digital platform in the mobility and interurban bus services sector. Founded in 2004, the company is <strong>primarily focused on the local Argentine market</strong>, where it operates a triple model (B2C, B2B and B2B2C) positioning it as an <strong>integral digital-transformation solution for transport companies</strong>. It has a robust proprietary technology infrastructure, process automation and active investment in Artificial Intelligence.</p>
+          <p data-lang="pt">Este memorando apresenta uma análise integral da avaliação da Voyenbus S.A., uma plataforma digital consolidada no setor de serviços de mobilidade e ônibus interurbanos. Fundada em 2004, a empresa está <strong>principalmente focada no mercado local argentino</strong>, onde opera um modelo triplo (B2C, B2B e B2B2C) que a posiciona como <strong>solução de transformação digital integral para empresas de transporte</strong>. Conta com uma robusta infraestrutura tecnológica proprietária, automação de processos e investimento ativo em Inteligência Artificial.</p>
 
           <p data-lang="es" data-lang-active>El objetivo de este memorándum es determinar un rango razonable de valuación, considerando comparables de mercado, potencial de crecimiento y el entorno competitivo. La estimación preliminar sitúa el valor de Voyenbus en torno a <strong>USD 6.7 millones</strong>, cifra que se fundamenta en:</p>
           <p data-lang="en">The objective of this memorandum is to determine a reasonable valuation range, considering market comparables, growth potential and the competitive environment. The preliminary estimate places Voyenbus's value at approximately <strong>USD 6.7 million</strong>, based on:</p>
@@ -5239,19 +5366,19 @@
 
           <ul class="report-list">
             <li>
-              <span data-lang="es" data-lang-active>Volumen anual proyectado de <strong>500.000 tickets</strong> vendidos, con un valor bruto de transacciones (GMV) estimado entre <strong>USD 7 y 10 millones</strong>.</span>
-              <span data-lang="en">Projected annual volume of <strong>500,000 tickets</strong> sold, with a Gross Merchandise Value (GMV) estimated between <strong>USD 7 and 10 million</strong>.</span>
-              <span data-lang="pt">Volume anual projetado de <strong>500.000 bilhetes</strong> vendidos, com Valor Bruto de Transações (GMV) estimado entre <strong>USD 7 e 10 milhões</strong>.</span>
+              <span data-lang="es" data-lang-active>Volumen de ventas cercano a <strong>USD 20 millones anuales</strong> entre todos los canales (B2C, B2B y B2B2C).</span>
+              <span data-lang="en">Annual sales volume of approximately <strong>USD 20 million</strong> across all channels (B2C, B2B and B2B2C).</span>
+              <span data-lang="pt">Volume de vendas de aproximadamente <strong>USD 20 milhões anuais</strong> entre todos os canais (B2C, B2B e B2B2C).</span>
             </li>
             <li>
-              <span data-lang="es" data-lang-active>Modelo de ingresos diversificado, basado en comisiones por transacción y licenciamiento de software B2B.</span>
-              <span data-lang="en">Diversified revenue model, based on transaction commissions and B2B software licensing.</span>
-              <span data-lang="pt">Modelo de receita diversificado, baseado em comissões por transação e licenciamento de software B2B.</span>
+              <span data-lang="es" data-lang-active>Modelo de ingresos diversificado: comisiones B2C, licencias SaaS B2B y, sobre todo, <strong>B2B2C</strong> — entrega de webs y herramientas digitales a las empresas de transporte para que vendan online bajo su marca, posicionando a Voyenbus como motor de transformación digital del operador.</span>
+              <span data-lang="en">Diversified revenue model: B2C commissions, B2B SaaS licenses and, above all, <strong>B2B2C</strong> — delivery of websites and digital tools to transport companies so they sell online under their own brand, positioning Voyenbus as the operator's digital-transformation engine.</span>
+              <span data-lang="pt">Modelo de receita diversificado: comissões B2C, licenças SaaS B2B e, sobretudo, <strong>B2B2C</strong> — entrega de sites e ferramentas digitais às empresas de transporte para que vendam online sob sua marca, posicionando a Voyenbus como motor de transformação digital do operador.</span>
             </li>
             <li>
-              <span data-lang="es" data-lang-active>Red consolidada de <strong>+50 operadores</strong> de autobuses y <strong>36 agencias</strong> de viaje, garantizando una base operativa sólida y escalable.</span>
-              <span data-lang="en">Consolidated network of <strong>+50 bus operators</strong> and <strong>36 travel agencies</strong>, ensuring a solid and scalable operational base.</span>
-              <span data-lang="pt">Rede consolidada de <strong>+50 operadores</strong> de ônibus e <strong>36 agências</strong> de viagem, garantindo uma base operacional sólida e escalável.</span>
+              <span data-lang="es" data-lang-active>Red consolidada de <strong>+50 operadores</strong> de autobuses y <strong>agencias corporativas</strong>, garantizando una base operativa sólida y escalable.</span>
+              <span data-lang="en">Consolidated network of <strong>+50 bus operators</strong> and <strong>corporate agencies</strong>, ensuring a solid and scalable operational base.</span>
+              <span data-lang="pt">Rede consolidada de <strong>+50 operadores</strong> de ônibus e <strong>agências corporativas</strong>, garantindo uma base operacional sólida e escalável.</span>
             </li>
             <li>
               <span data-lang="es" data-lang-active>Participación en un mercado regional en expansión, con crecimiento proyectado del <strong>26.2% CAGR</strong> en boletos de bus en Sudamérica hacia 2030.</span>
@@ -5298,9 +5425,19 @@
             <span data-lang="en">2.1. Business Model and Service Offering</span>
             <span data-lang="pt">2.1. Modelo de Negócio e Oferta de Serviços</span>
           </h3>
-          <p data-lang="es" data-lang-active>Voyenbus S.A. opera como una plataforma integral para la comercialización y distribución de servicios de autobuses interurbanos. Su función principal es la comercialización y distribución de servicios de transporte en Latinoamérica, llegando a más personas en más lugares a través de sus canales B2B y B2C.</p>
-          <p data-lang="en">Voyenbus S.A. operates as a comprehensive platform for the commercialization and distribution of interurban bus services. Its main function is the commercialization and distribution of transportation services in Latin America, reaching more people in more places through its B2B and B2C channels.</p>
-          <p data-lang="pt">A Voyenbus S.A. opera como uma plataforma integral para a comercialização e distribuição de serviços de ônibus interurbanos. Sua função principal é a comercialização e distribuição de serviços de transporte na América Latina, alcançando mais pessoas em mais lugares por meio de seus canais B2B e B2C.</p>
+          <div class="report-callout">
+            <strong>
+              <span data-lang="es" data-lang-active>🎯 Foco Estratégico:</span>
+              <span data-lang="en">🎯 Strategic Focus:</span>
+              <span data-lang="pt">🎯 Foco Estratégico:</span>
+            </strong>
+            <span data-lang="es" data-lang-active> Voyenbus está principalmente <strong>enfocada en el mercado local argentino</strong>, donde su rol diferencial es ser la <strong>solución tecnológica para empresas de transporte</strong> — entrega a las operadoras sus propias webs y herramientas para vender online (modelo <strong>B2B2C</strong>: Voyenbus → Empresa → Consumidor final). La empresa trabaja activamente en <strong>automatización de procesos</strong> e <strong>Inteligencia Artificial</strong> para acelerar la transformación digital de las compañías del sector.</span>
+            <span data-lang="en"> Voyenbus is primarily <strong>focused on the local Argentine market</strong>, where its differential role is to be the <strong>technology solution for transport companies</strong> — delivering operators their own websites and tools to sell online (<strong>B2B2C</strong> model: Voyenbus → Company → End consumer). The company is actively working on <strong>process automation</strong> and <strong>Artificial Intelligence</strong> to accelerate the digital transformation of operators in the sector.</span>
+            <span data-lang="pt"> A Voyenbus está principalmente <strong>focada no mercado local argentino</strong>, onde seu papel diferencial é ser a <strong>solução tecnológica para empresas de transporte</strong> — entregando aos operadores seus próprios sites e ferramentas para vender online (modelo <strong>B2B2C</strong>: Voyenbus → Empresa → Consumidor final). A empresa trabalha ativamente em <strong>automação de processos</strong> e <strong>Inteligência Artificial</strong> para acelerar a transformação digital das companhias do setor.</span>
+          </div>
+          <p data-lang="es" data-lang-active>Voyenbus S.A. opera como una plataforma integral para la comercialización y distribución de servicios de autobuses interurbanos. Su función principal es la comercialización y distribución de servicios de transporte en Latinoamérica, llegando a más personas en más lugares a través de sus canales B2C, B2B y especialmente B2B2C.</p>
+          <p data-lang="en">Voyenbus S.A. operates as a comprehensive platform for the commercialization and distribution of interurban bus services. Its main function is the commercialization and distribution of transportation services in Latin America, reaching more people in more places through its B2C, B2B and especially B2B2C channels.</p>
+          <p data-lang="pt">A Voyenbus S.A. opera como uma plataforma integral para a comercialização e distribuição de serviços de ônibus interurbanos. Sua função principal é a comercialização e distribuição de serviços de transporte na América Latina, alcançando mais pessoas em mais lugares por meio de seus canais B2C, B2B e especialmente B2B2C.</p>
 
           <h4 class="report-subhead">
             <span data-lang="es" data-lang-active>TOLPOS y TOLWEB (B2B): Soluciones para Empresas de Transporte</span>
@@ -5365,9 +5502,9 @@
             <span data-lang="en">2.2. Operational Scale and Geographic Reach</span>
             <span data-lang="pt">2.2. Escala Operacional e Alcance Geográfico</span>
           </h3>
-          <p data-lang="es" data-lang-active>Con operaciones en línea desde 2004, Voyenbus tiene casi dos décadas de experiencia en LatAm. La empresa ha emitido más de 2.5 millones de billetes, colaborando con +50 empresas de bus interurbanos y 36 agencias. La inclusión de un gran número de agencias indica una estrategia de distribución que aprovecha canales indirectos.</p>
-          <p data-lang="en">Operating online since 2004, Voyenbus has nearly two decades of LatAm experience. The company has issued over 2.5 million tickets, partnering with +50 interurban bus companies and 36 agencies. The large agency network indicates a distribution strategy that leverages indirect channels.</p>
-          <p data-lang="pt">Operando online desde 2004, a Voyenbus tem quase duas décadas de experiência na América Latina. A empresa emitiu mais de 2,5 milhões de bilhetes, em parceria com +50 empresas de ônibus interurbanos e 36 agências. A inclusão de um grande número de agências indica uma estratégia de distribuição que aproveita canais indiretos.</p>
+          <p data-lang="es" data-lang-active>Con operaciones en línea desde 2004, Voyenbus tiene casi dos décadas de experiencia en LatAm. La empresa ha emitido más de 2.5 millones de billetes, colaborando con +50 empresas de bus interurbanos y una red de agencias corporativas. La red de agencias corporativas refleja una estrategia de distribución que aprovecha canales indirectos.</p>
+          <p data-lang="en">Operating online since 2004, Voyenbus has nearly two decades of LatAm experience. The company has issued over 2.5 million tickets, partnering with +50 interurban bus companies and a network of corporate agencies. The corporate agency network reflects a distribution strategy that leverages indirect channels.</p>
+          <p data-lang="pt">Operando online desde 2004, a Voyenbus tem quase duas décadas de experiência na América Latina. A empresa emitiu mais de 2,5 milhões de bilhetes, em parceria com +50 empresas de ônibus interurbanos e uma rede de agências corporativas. A rede de agências corporativas reflete uma estratégia de distribuição que aproveita canais indiretos.</p>
 
           <p data-lang="es" data-lang-active>Geográficamente: Argentina (posición significativa), Brasil, Chile y Uruguay activos. Mención de "Distribución Global" incluyendo Unión Europea y EEUU sugiere ambiciones más amplias. La plataforma maneja también rutas internas en Paraguay y Brasil, mostrando capacidad para complejidad transfronteriza y nacional.</p>
           <p data-lang="en">Geographically: Argentina (significant position), Brazil, Chile and Uruguay active. Mention of "Global Distribution" including the EU and US suggests broader ambitions. The platform also handles internal routes in Paraguay and Brazil, showing capability for cross-border and domestic complexity.</p>
@@ -5432,6 +5569,44 @@
           <p data-lang="es" data-lang-active>La certificación ISO 9001:2015 demuestra madurez operativa. Voyenbus no es solo un canal de ventas sino un proveedor de tecnología capaz de mejorar la eficiencia y rentabilidad de sus socios, reduciendo costos de desarrollo y acelerando penetración para un adquirente.</p>
           <p data-lang="en">ISO 9001:2015 certification demonstrates operational maturity. Voyenbus is not just a sales channel but a technology provider capable of improving partner efficiency and profitability, reducing development costs and accelerating penetration for an acquirer.</p>
           <p data-lang="pt">A certificação ISO 9001:2015 demonstra maturidade operacional. A Voyenbus não é apenas um canal de vendas, mas um provedor de tecnologia capaz de melhorar a eficiência e rentabilidade de seus parceiros, reduzindo custos de desenvolvimento e acelerando a penetração para um adquirente.</p>
+
+          <h4 class="report-subhead" style="color: var(--accent);">
+            <span data-lang="es" data-lang-active>🤖 Inteligencia Artificial — Posición de Vanguardia</span>
+            <span data-lang="en">🤖 Artificial Intelligence — Cutting-Edge Position</span>
+            <span data-lang="pt">🤖 Inteligência Artificial — Posição de Vanguarda</span>
+          </h4>
+          <p data-lang="es" data-lang-active>Voyenbus está trabajando <strong>muy fuerte con Inteligencia Artificial</strong> en múltiples frentes que la posicionan por delante de sus competidores regionales:</p>
+          <p data-lang="en">Voyenbus is working <strong>intensively with Artificial Intelligence</strong> on multiple fronts that position it ahead of its regional competitors:</p>
+          <p data-lang="pt">A Voyenbus está trabalhando <strong>fortemente com Inteligência Artificial</strong> em múltiplas frentes que a posicionam à frente dos seus concorrentes regionais:</p>
+          <ul class="report-list">
+            <li>
+              <strong><span data-lang="es" data-lang-active>Tableros de analítica con IA ·</span><span data-lang="en">AI-powered analytics dashboards ·</span><span data-lang="pt">Painéis analíticos com IA ·</span></strong>
+              <span data-lang="es" data-lang-active> agentes que dan consejos a operadores, generan estadísticas en tiempo real y hacen predicciones de demanda y comportamiento.</span>
+              <span data-lang="en"> agents that advise operators, generate real-time statistics and produce demand and behavior predictions.</span>
+              <span data-lang="pt"> agentes que aconselham operadores, geram estatísticas em tempo real e fazem previsões de demanda e comportamento.</span>
+            </li>
+            <li>
+              <strong><span data-lang="es" data-lang-active>Atención al cliente automatizada ·</span><span data-lang="en">Automated customer support ·</span><span data-lang="pt">Atendimento ao cliente automatizado ·</span></strong>
+              <span data-lang="es" data-lang-active> chatbots con IA cubriendo pre-viaje, post-viaje y consultas operativas, escalando casos complejos a humanos.</span>
+              <span data-lang="en"> AI-powered chatbots covering pre-trip, post-trip and operational inquiries, escalating complex cases to humans.</span>
+              <span data-lang="pt"> chatbots com IA cobrindo pré-viagem, pós-viagem e consultas operacionais, escalando casos complexos a humanos.</span>
+            </li>
+            <li>
+              <strong><span data-lang="es" data-lang-active>Control de fraude inteligente ·</span><span data-lang="en">Intelligent fraud control ·</span><span data-lang="pt">Controle de fraude inteligente ·</span></strong>
+              <span data-lang="es" data-lang-active> modelos de IA que detectan transacciones sospechosas, patrones anómalos y previenen pérdidas en tiempo real.</span>
+              <span data-lang="en"> AI models that detect suspicious transactions, anomalous patterns and prevent losses in real time.</span>
+              <span data-lang="pt"> modelos de IA que detectam transações suspeitas, padrões anômalos e previnem perdas em tempo real.</span>
+            </li>
+            <li>
+              <strong><span data-lang="es" data-lang-active>Automatización de procesos ·</span><span data-lang="en">Process automation ·</span><span data-lang="pt">Automação de processos ·</span></strong>
+              <span data-lang="es" data-lang-active> integraciones automáticas con ERPs, conciliaciones, gestión de inventario, todo orquestado vía workflows con IA.</span>
+              <span data-lang="en"> automatic ERP integrations, reconciliations, inventory management, all orchestrated via AI-powered workflows.</span>
+              <span data-lang="pt"> integrações automáticas com ERPs, conciliações, gestão de inventário, todo orquestrado via workflows com IA.</span>
+            </li>
+          </ul>
+          <p data-lang="es" data-lang-active>Esta posición avanzada en IA aplicada al transporte es un <strong>activo estratégico de gran valor</strong> de cara al futuro del sector — pocas plataformas latinoamericanas pueden igualar este nivel de sofisticación tecnológica.</p>
+          <p data-lang="en">This advanced position in AI applied to transportation is a <strong>highly valuable strategic asset</strong> for the sector's future — few Latin American platforms can match this level of technological sophistication.</p>
+          <p data-lang="pt">Esta posição avançada em IA aplicada ao transporte é um <strong>ativo estratégico de grande valor</strong> de cara ao futuro do setor — poucas plataformas latino-americanas podem igualar esse nível de sofisticação tecnológica.</p>
         </section>
       </div>
     </div>
@@ -5506,7 +5681,7 @@
           <h4 class="report-subhead"><span data-lang="es" data-lang-active>Para Operadores (B2B)</span><span data-lang="en">For Operators (B2B)</span><span data-lang="pt">Para Operadores (B2B)</span></h4>
           <ul class="report-list">
             <li><strong><span data-lang="es" data-lang-active>Tecnología propia y adaptable</span><span data-lang="en">Proprietary, adaptable technology</span><span data-lang="pt">Tecnologia própria e adaptável</span></strong> <span data-lang="es" data-lang-active>— software modular marca blanca.</span><span data-lang="en">— modular white-label software.</span><span data-lang="pt">— software modular white-label.</span></li>
-            <li><strong><span data-lang="es" data-lang-active>Optimización de ingresos</span><span data-lang="en">Revenue optimization</span><span data-lang="pt">Otimização de receita</span></strong> <span data-lang="es" data-lang-active>— Yield Management y BI.</span><span data-lang="en">— Yield Management and BI.</span><span data-lang="pt">— Yield Management e BI.</span></li>
+            <li><strong><span data-lang="es" data-lang-active>Optimización de ingresos</span><span data-lang="en">Revenue optimization</span><span data-lang="pt">Otimização de receita</span></strong> <span data-lang="es" data-lang-active>— B.I. con Inteligencia Artificial.</span><span data-lang="en">— B.I. powered by AI.</span><span data-lang="pt">— B.I. com Inteligência Artificial.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Ampliación del alcance</span><span data-lang="en">Reach expansion</span><span data-lang="pt">Ampliação do alcance</span></strong> <span data-lang="es" data-lang-active>— API, GDS (Sabre, Google Transit) y agencias.</span><span data-lang="en">— API, GDS (Sabre, Google Transit) and agencies.</span><span data-lang="pt">— API, GDS (Sabre, Google Transit) e agências.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Marketing digital integral</span><span data-lang="en">Comprehensive digital marketing</span><span data-lang="pt">Marketing digital integral</span></strong> <span data-lang="es" data-lang-active>— estrategias omnicanal.</span><span data-lang="en">— omnichannel strategies.</span><span data-lang="pt">— estratégias omnicanal.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Certificación de calidad</span><span data-lang="en">Quality certification</span><span data-lang="pt">Certificação de qualidade</span></strong> — ISO 9001:2015.</li>
@@ -5516,7 +5691,7 @@
           <ul class="report-list">
             <li><strong><span data-lang="es" data-lang-active>Modelo dual B2C + B2B</span><span data-lang="en">Dual B2C + B2B model</span><span data-lang="pt">Modelo dual B2C + B2B</span></strong> <span data-lang="es" data-lang-active>— diversificación e integración profunda en la cadena de valor.</span><span data-lang="en">— diversification and deep value-chain integration.</span><span data-lang="pt">— diversificação e integração profunda na cadeia de valor.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Stack tecnológico propio y robusto</span><span data-lang="en">Proprietary, robust tech stack</span><span data-lang="pt">Stack tecnológico próprio e robusto</span></strong> <span data-lang="es" data-lang-active>— control total e innovación rápida.</span><span data-lang="en">— full control and rapid innovation.</span><span data-lang="pt">— controle total e inovação rápida.</span></li>
-            <li><strong><span data-lang="es" data-lang-active>Red consolidada</span><span data-lang="en">Consolidated network</span><span data-lang="pt">Rede consolidada</span></strong> <span data-lang="es" data-lang-active>— +85 operadores y 133 agencias en LatAm.</span><span data-lang="en">— +85 operators and 133 agencies in LatAm.</span><span data-lang="pt">— +85 operadores e 133 agências na América Latina.</span></li>
+            <li><strong><span data-lang="es" data-lang-active>Red consolidada</span><span data-lang="en">Consolidated network</span><span data-lang="pt">Rede consolidada</span></strong> <span data-lang="es" data-lang-active>— +85 operadores y agencias corporativas en LatAm.</span><span data-lang="en">— +85 operators and corporate agencies in LatAm.</span><span data-lang="pt">— +85 operadores e agências corporativas na América Latina.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Experiencia y longevidad</span><span data-lang="en">Experience and longevity</span><span data-lang="pt">Experiência e longevidade</span></strong> <span data-lang="es" data-lang-active>— operaciones online desde 2004.</span><span data-lang="en">— online operations since 2004.</span><span data-lang="pt">— operações online desde 2004.</span></li>
           </ul>
         </section>
@@ -5614,7 +5789,7 @@
           <ul class="report-list">
             <li><strong><span data-lang="es" data-lang-active>Base tecnológica propia y modular ·</span><span data-lang="en">Proprietary, modular tech base ·</span><span data-lang="pt">Base tecnológica própria e modular ·</span></strong> <span data-lang="es" data-lang-active>replicación fácil y adaptación a nuevos mercados sin inversión lineal.</span><span data-lang="en">easy replication and adaptation to new markets without linear investment.</span><span data-lang="pt">fácil replicação e adaptação a novos mercados sem investimento linear.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Distribución digital ·</span><span data-lang="en">Digital distribution ·</span><span data-lang="pt">Distribuição digital ·</span></strong> <span data-lang="es" data-lang-active>alcance a millones de usuarios sin limitaciones geográficas físicas.</span><span data-lang="en">reaches millions of users without physical geographic limits.</span><span data-lang="pt">alcance a milhões de usuários sem limitações geográficas físicas.</span></li>
-            <li><strong><span data-lang="es" data-lang-active>Red de socios existente ·</span><span data-lang="en">Existing partner network ·</span><span data-lang="pt">Rede de parceiros existente ·</span></strong> <span data-lang="es" data-lang-active>+50 operadores y +36 agencias facilitan expansión a nuevas rutas y mercados.</span><span data-lang="en">+50 operators and +36 agencies enable expansion to new routes and markets.</span><span data-lang="pt">+50 operadores e +36 agências facilitam expansão para novas rotas e mercados.</span></li>
+            <li><strong><span data-lang="es" data-lang-active>Red de socios existente ·</span><span data-lang="en">Existing partner network ·</span><span data-lang="pt">Rede de parceiros existente ·</span></strong> <span data-lang="es" data-lang-active>+50 operadores y agencias corporativas facilitan expansión a nuevas rutas y mercados.</span><span data-lang="en">+50 operators and corporate agencies enable expansion to new routes and markets.</span><span data-lang="pt">+50 operadores e agências corporativas facilitam expansão para novas rotas e mercados.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Mercado en crecimiento ·</span><span data-lang="en">Growing market ·</span><span data-lang="pt">Mercado em crescimento ·</span></strong> <span data-lang="es" data-lang-active>8.2% CAGR LatAm hasta 2030.</span><span data-lang="en">8.2% LatAm CAGR through 2030.</span><span data-lang="pt">8,2% CAGR América Latina até 2030.</span></li>
             <li><strong><span data-lang="es" data-lang-active>Potencial de nuevos negocios ·</span><span data-lang="en">New business potential ·</span><span data-lang="pt">Potencial de novos negócios ·</span></strong> <span data-lang="es" data-lang-active>data-as-a-service para terceros, software TOL para otros servicios.</span><span data-lang="en">data-as-a-service for third parties, TOL software for other services.</span><span data-lang="pt">data-as-a-service para terceiros, software TOL para outros serviços.</span></li>
           </ul>
