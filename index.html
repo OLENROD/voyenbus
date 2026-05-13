@@ -711,6 +711,179 @@
     }
   }
 
+  /* ============== P&L EVOLUTION SECTION ============== */
+  .pl-evolution {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .pl-evolution-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .pl-evolution-eyebrow {
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .pl-evolution-header h3 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(22px, 3vw, 30px);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .pl-evolution-header p {
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  /* P&L table */
+  .pl-table-wrap {
+    overflow-x: auto;
+    border-radius: 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    margin-bottom: 40px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pl-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .pl-table thead th {
+    padding: 14px 16px;
+    color: #fff;
+    background: #1e3a5f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+  }
+  .pl-table thead th:first-child {
+    background: transparent;
+    text-align: left;
+  }
+  .pl-table thead .year-eyebrow th {
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 10px 16px 4px;
+  }
+  .pl-table thead .year-eyebrow th:nth-child(4) { color: var(--accent); }
+  .pl-table tbody td {
+    padding: 10px 16px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    text-align: right;
+  }
+  .pl-table tbody td:first-child {
+    text-align: left;
+    color: var(--text);
+  }
+  .pl-table tbody tr.pl-section td {
+    color: #fff;
+    font-weight: 700;
+    background: rgba(255,255,255,0.03);
+  }
+  .pl-table tbody tr.pl-subsection td {
+    background: rgba(45,212,212,0.06);
+    color: #fff;
+    font-weight: 700;
+    border-top: 2px solid var(--accent);
+  }
+  .pl-table tbody tr.pl-growth td {
+    color: var(--accent);
+    font-style: italic;
+    font-size: 12px;
+    background: rgba(6,9,13,0.4);
+  }
+  .pl-table tbody tr.pl-growth td:first-child {
+    color: var(--accent);
+    padding-left: 32px;
+  }
+  .pl-table tbody tr.pl-component td {
+    background: rgba(255,200,150,0.05);
+    color: var(--text-dim);
+  }
+  .pl-table tbody tr.pl-component td:first-child {
+    padding-left: 32px;
+  }
+  .pl-table tbody tr.pl-italic td {
+    font-style: italic;
+    color: var(--text-dim);
+    background: rgba(255,200,150,0.05);
+  }
+  .pl-table tbody tr.pl-italic td:first-child { padding-left: 32px; }
+  .pl-table tbody tr.pl-negative td:not(:first-child) { color: #fca5a5; }
+  .pl-table tbody tr.pl-spacer td {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    height: 6px;
+  }
+  .pl-table tbody tr.pl-kpi-header td {
+    background: #06090d;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-top: 3px solid var(--accent);
+  }
+  .pl-table tbody tr.pl-kpi td {
+    background: rgba(255,200,150,0.05);
+    color: var(--text-dim);
+  }
+  .pl-table tbody tr.pl-kpi td:first-child { padding-left: 32px; }
+
+  /* Charts grid */
+  .pl-charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .pl-chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  .pl-chart-card.full-width { grid-column: 1 / -1; }
+  .pl-chart-title {
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .pl-chart-subtitle {
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .pl-chart-canvas-wrap {
+    position: relative;
+    height: 280px;
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    .pl-charts { grid-template-columns: 1fr; }
+    .pl-chart-canvas-wrap { height: 260px; }
+    .pl-table { font-size: 12px; }
+    .pl-table thead th, .pl-table tbody td { padding: 8px 10px; }
+  }
+
   /* ============== FINANCIAL DASHBOARD ============== */
   .financial-dashboard {
     margin-top: 60px;
@@ -2291,6 +2464,7 @@
   }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body class="gate-locked">
 
@@ -4365,6 +4539,327 @@
         </div>
       </div>
 
+      <!-- ============== P&L EVOLUTION ============== -->
+      <div class="pl-evolution">
+        <div class="pl-evolution-header">
+          <div class="pl-evolution-eyebrow">VOYENBUS</div>
+          <h3>P&amp;L Evolution</h3>
+          <p>
+            <span data-lang="es" data-lang-active>Todos los valores en millones de USD</span>
+            <span data-lang="en">All values in USD Millions</span>
+            <span data-lang="pt">Todos os valores em milhões de USD</span>
+          </p>
+        </div>
+
+        <!-- Table -->
+        <div class="pl-table-wrap">
+          <table class="pl-table">
+            <thead>
+              <tr class="year-eyebrow">
+                <th></th>
+                <th>REAL</th>
+                <th>REAL</th>
+                <th>PLAN</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th>2024</th>
+                <th>2025</th>
+                <th>2026</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- # Tickets block -->
+              <tr class="pl-component"><td>OTA (Unibus)</td><td>0.11</td><td>0.10</td><td>0.20</td></tr>
+              <tr class="pl-component"><td>White Label (TolWeb)</td><td>0.38</td><td>0.50</td><td>0.90</td></tr>
+              <tr class="pl-subsection">
+                <td>
+                  <span data-lang="es" data-lang-active># Tickets (MM)</span>
+                  <span data-lang="en"># Tickets (MM)</span>
+                  <span data-lang="pt"># Bilhetes (MM)</span>
+                </td>
+                <td>0.49</td><td>0.60</td><td>1.10</td>
+              </tr>
+              <tr class="pl-growth">
+                <td>
+                  <span data-lang="es" data-lang-active>Tasa de Crecimiento (%)</span>
+                  <span data-lang="en">Growth Rate (%)</span>
+                  <span data-lang="pt">Taxa de Crescimento (%)</span>
+                </td>
+                <td></td><td>23%</td><td>84%</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- Average Ticket -->
+              <tr class="pl-italic">
+                <td>
+                  <span data-lang="es" data-lang-active>Ticket Promedio Unibus (USD)</span>
+                  <span data-lang="en">Unibus Average Ticket</span>
+                  <span data-lang="pt">Ticket Médio Unibus</span>
+                </td>
+                <td>35</td><td>35</td><td>35</td>
+              </tr>
+              <tr class="pl-italic">
+                <td>
+                  <span data-lang="es" data-lang-active>Ticket Promedio White Label (USD)</span>
+                  <span data-lang="en">White Label Average Ticket</span>
+                  <span data-lang="pt">Ticket Médio White Label</span>
+                </td>
+                <td>20</td><td>35</td><td>30</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- GMV block -->
+              <tr class="pl-component"><td>OTA (Unibus)</td><td>4</td><td>4</td><td>6</td></tr>
+              <tr class="pl-component"><td>White Label (TolWeb)</td><td>8</td><td>18</td><td>28</td></tr>
+              <tr class="pl-subsection">
+                <td>GMV</td>
+                <td>11</td><td>21</td><td>34</td>
+              </tr>
+              <tr class="pl-growth">
+                <td>
+                  <span data-lang="es" data-lang-active>Tasa de Crecimiento (%)</span>
+                  <span data-lang="en">Growth Rate (%)</span>
+                  <span data-lang="pt">Taxa de Crescimento (%)</span>
+                </td>
+                <td></td><td>84%</td><td>62%</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- Take rates -->
+              <tr class="pl-italic">
+                <td>
+                  <span data-lang="es" data-lang-active>Take Rate Unibus %</span>
+                  <span data-lang="en">Unibus Take Rate %</span>
+                  <span data-lang="pt">Take Rate Unibus %</span>
+                </td>
+                <td>10%</td><td>10%</td><td>8%</td>
+              </tr>
+              <tr class="pl-italic">
+                <td>
+                  <span data-lang="es" data-lang-active>Take Rate White Label %</span>
+                  <span data-lang="en">White Label Take Rate %</span>
+                  <span data-lang="pt">Take Rate White Label %</span>
+                </td>
+                <td>6%</td><td>6%</td><td>6%</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- Net Revenue block -->
+              <tr class="pl-component"><td>OTA (Unibus)</td><td>0.40</td><td>0.30</td><td>0.50</td></tr>
+              <tr class="pl-component"><td>White Label (TolWeb)</td><td>0.50</td><td>1.10</td><td>1.70</td></tr>
+              <tr class="pl-component"><td>Other (TOLPOS)</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr class="pl-subsection">
+                <td>
+                  <span data-lang="es" data-lang-active>Ingreso Neto</span>
+                  <span data-lang="en">Net Revenue</span>
+                  <span data-lang="pt">Receita Líquida</span>
+                </td>
+                <td>0.82</td><td>1.38</td><td>2.16</td>
+              </tr>
+              <tr class="pl-growth">
+                <td>
+                  <span data-lang="es" data-lang-active>Tasa de Crecimiento (%)</span>
+                  <span data-lang="en">Growth Rate (%)</span>
+                  <span data-lang="pt">Taxa de Crescimento (%)</span>
+                </td>
+                <td></td><td>69%</td><td>56%</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- COGS -->
+              <tr class="pl-negative">
+                <td>
+                  <span data-lang="es" data-lang-active>COGS (excluyendo personal)</span>
+                  <span data-lang="en">COGS (Excluding people)</span>
+                  <span data-lang="pt">COGS (excluindo pessoal)</span>
+                </td>
+                <td>-0.10</td><td>-0.10</td><td>-0.20</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- Gross Profit -->
+              <tr class="pl-subsection">
+                <td>
+                  <span data-lang="es" data-lang-active>Ganancia Bruta</span>
+                  <span data-lang="en">Gross Profit</span>
+                  <span data-lang="pt">Lucro Bruto</span>
+                </td>
+                <td>0.72</td><td>1.28</td><td>1.96</td>
+              </tr>
+              <tr class="pl-italic">
+                <td>
+                  <span data-lang="es" data-lang-active>Margen Bruto (% NR)</span>
+                  <span data-lang="en">Gross Margin (% NR)</span>
+                  <span data-lang="pt">Margem Bruta (% NR)</span>
+                </td>
+                <td>88%</td><td>93%</td><td>91%</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- Operating costs -->
+              <tr class="pl-negative">
+                <td>
+                  <span data-lang="es" data-lang-active>Equipo / Personal</span>
+                  <span data-lang="en">Team / People</span>
+                  <span data-lang="pt">Equipe / Pessoal</span>
+                </td>
+                <td>-0.27</td><td>-0.55</td><td>-0.90</td>
+              </tr>
+              <tr class="pl-negative">
+                <td>
+                  <span data-lang="es" data-lang-active>Otros gastos</span>
+                  <span data-lang="en">Other Expenses</span>
+                  <span data-lang="pt">Outras Despesas</span>
+                </td>
+                <td>0</td><td>0</td><td>0</td>
+              </tr>
+              <tr class="pl-negative">
+                <td>
+                  <span data-lang="es" data-lang-active>Infraestructura</span>
+                  <span data-lang="en">Infrastructure</span>
+                  <span data-lang="pt">Infraestrutura</span>
+                </td>
+                <td>-0.50</td><td>-0.22</td><td>-0.24</td>
+              </tr>
+              <tr class="pl-negative">
+                <td>
+                  <span data-lang="es" data-lang-active>Operaciones</span>
+                  <span data-lang="en">Operations</span>
+                  <span data-lang="pt">Operações</span>
+                </td>
+                <td>-0.11</td><td>-0.18</td><td>-0.26</td>
+              </tr>
+
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+
+              <!-- EBITDA -->
+              <tr class="pl-subsection">
+                <td>Proforma EBITDA</td>
+                <td>-0.16</td><td>0.34</td><td>0.56</td>
+              </tr>
+              <tr class="pl-growth">
+                <td>
+                  <span data-lang="es" data-lang-active>Tasa de Crecimiento (%)</span>
+                  <span data-lang="en">Growth Rate (%)</span>
+                  <span data-lang="pt">Taxa de Crescimento (%)</span>
+                </td>
+                <td></td><td>107%</td><td>67%</td>
+              </tr>
+
+              <!-- KPIs -->
+              <tr class="pl-spacer"><td colspan="4"></td></tr>
+              <tr class="pl-kpi-header">
+                <td>KPI's</td><td></td><td>2025</td><td></td>
+              </tr>
+              <tr class="pl-kpi">
+                <td>
+                  <span data-lang="es" data-lang-active>Empleados Full Time</span>
+                  <span data-lang="en">Full Time Employees</span>
+                  <span data-lang="pt">Empregados Full Time</span>
+                </td>
+                <td></td><td>10</td><td></td>
+              </tr>
+              <tr class="pl-kpi">
+                <td>
+                  <span data-lang="es" data-lang-active>Saldo Neto de Caja</span>
+                  <span data-lang="en">Net Cash Balance</span>
+                  <span data-lang="pt">Saldo Líquido de Caixa</span>
+                </td>
+                <td></td><td>20</td><td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ============== CHARTS ============== -->
+        <div class="pl-charts">
+
+          <!-- Chart 1: # Tickets by channel -->
+          <div class="pl-chart-card">
+            <div class="pl-chart-title">
+              <span data-lang="es" data-lang-active># Tickets por Canal</span>
+              <span data-lang="en"># Tickets by Channel</span>
+              <span data-lang="pt"># Bilhetes por Canal</span>
+            </div>
+            <div class="pl-chart-subtitle">
+              <span data-lang="es" data-lang-active>En millones · OTA (Unibus) + White Label (TolWeb)</span>
+              <span data-lang="en">In millions · OTA (Unibus) + White Label (TolWeb)</span>
+              <span data-lang="pt">Em milhões · OTA (Unibus) + White Label (TolWeb)</span>
+            </div>
+            <div class="pl-chart-canvas-wrap"><canvas id="chartTickets"></canvas></div>
+          </div>
+
+          <!-- Chart 2: GMV by channel -->
+          <div class="pl-chart-card">
+            <div class="pl-chart-title">GMV
+              <span data-lang="es" data-lang-active>por Canal</span>
+              <span data-lang="en">by Channel</span>
+              <span data-lang="pt">por Canal</span>
+            </div>
+            <div class="pl-chart-subtitle">
+              <span data-lang="es" data-lang-active>En millones USD · OTA (Unibus) + White Label (TolWeb)</span>
+              <span data-lang="en">In USD millions · OTA (Unibus) + White Label (TolWeb)</span>
+              <span data-lang="pt">Em milhões USD · OTA (Unibus) + White Label (TolWeb)</span>
+            </div>
+            <div class="pl-chart-canvas-wrap"><canvas id="chartGmv"></canvas></div>
+          </div>
+
+          <!-- Chart 3: Average ticket level -->
+          <div class="pl-chart-card">
+            <div class="pl-chart-title">
+              <span data-lang="es" data-lang-active>Nivel de Ticket Promedio (USD)</span>
+              <span data-lang="en">Average Ticket Level (USD)</span>
+              <span data-lang="pt">Nível de Ticket Médio (USD)</span>
+            </div>
+            <div class="pl-chart-subtitle">
+              <span data-lang="es" data-lang-active>Unibus vs White Label</span>
+              <span data-lang="en">Unibus vs White Label</span>
+              <span data-lang="pt">Unibus vs White Label</span>
+            </div>
+            <div class="pl-chart-canvas-wrap"><canvas id="chartAvgTicket"></canvas></div>
+          </div>
+
+          <!-- Chart 4: Net Revenue, Gross Profit, EBITDA -->
+          <div class="pl-chart-card">
+            <div class="pl-chart-title">
+              <span data-lang="es" data-lang-active>Ingreso Neto · Ganancia Bruta · EBITDA</span>
+              <span data-lang="en">Net Revenue · Gross Profit · EBITDA</span>
+              <span data-lang="pt">Receita Líquida · Lucro Bruto · EBITDA</span>
+            </div>
+            <div class="pl-chart-subtitle">
+              <span data-lang="es" data-lang-active>En millones USD</span>
+              <span data-lang="en">In USD millions</span>
+              <span data-lang="pt">Em milhões USD</span>
+            </div>
+            <div class="pl-chart-canvas-wrap"><canvas id="chartProfitability"></canvas></div>
+          </div>
+
+          <!-- Chart 5: Growth rates (line, full width) -->
+          <div class="pl-chart-card full-width">
+            <div class="pl-chart-title">
+              <span data-lang="es" data-lang-active>Tasas de Crecimiento (%)</span>
+              <span data-lang="en">Growth Rates (%)</span>
+              <span data-lang="pt">Taxas de Crescimento (%)</span>
+            </div>
+            <div class="pl-chart-subtitle">
+              <span data-lang="es" data-lang-active>Tickets · GMV · Ingreso Neto · Ganancia Bruta · Proforma EBITDA (2025 y 2026)</span>
+              <span data-lang="en">Tickets · GMV · Net Revenue · Gross Profit · Proforma EBITDA (2025 &amp; 2026)</span>
+              <span data-lang="pt">Bilhetes · GMV · Receita Líquida · Lucro Bruto · Proforma EBITDA (2025 e 2026)</span>
+            </div>
+            <div class="pl-chart-canvas-wrap"><canvas id="chartGrowth"></canvas></div>
+          </div>
+
+        </div>
+      </div>
+
       <!-- Methodology table -->
       <h3 style="text-align:center; color: var(--accent); font-size: 13px; letter-spacing: 3px; margin: 40px 0 18px; text-transform: uppercase;">
         <span data-lang="es" data-lang-active>Metodologías de Valuación</span>
@@ -6325,6 +6820,296 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeAllModals();
   });
+
+  // ============== P&L EVOLUTION CHARTS ==============
+  (function() {
+    if (typeof Chart === 'undefined') return;
+
+    // Localized chart labels for the 3 supported languages
+    const CHART_LABELS = {
+      es: {
+        ota: 'OTA (Unibus)',
+        whiteLabel: 'White Label (TolWeb)',
+        unibus: 'Unibus',
+        whiteLabelShort: 'White Label',
+        netRevenue: 'Ingreso Neto',
+        grossProfit: 'Ganancia Bruta',
+        ebitda: 'Proforma EBITDA',
+        tickets: '# Tickets',
+        gmv: 'GMV',
+        millions: 'En millones',
+        usdM: 'USD M',
+        usd: 'USD',
+        percent: '%'
+      },
+      en: {
+        ota: 'OTA (Unibus)',
+        whiteLabel: 'White Label (TolWeb)',
+        unibus: 'Unibus',
+        whiteLabelShort: 'White Label',
+        netRevenue: 'Net Revenue',
+        grossProfit: 'Gross Profit',
+        ebitda: 'Proforma EBITDA',
+        tickets: '# Tickets',
+        gmv: 'GMV',
+        millions: 'In millions',
+        usdM: 'USD M',
+        usd: 'USD',
+        percent: '%'
+      },
+      pt: {
+        ota: 'OTA (Unibus)',
+        whiteLabel: 'White Label (TolWeb)',
+        unibus: 'Unibus',
+        whiteLabelShort: 'White Label',
+        netRevenue: 'Receita Líquida',
+        grossProfit: 'Lucro Bruto',
+        ebitda: 'Proforma EBITDA',
+        tickets: '# Bilhetes',
+        gmv: 'GMV',
+        millions: 'Em milhões',
+        usdM: 'USD M',
+        usd: 'USD',
+        percent: '%'
+      }
+    };
+
+    const COLORS = {
+      ota:        '#2dd4d4',  // accent teal
+      whiteLabel: '#3b82f6',  // blue
+      unibus:     '#2dd4d4',
+      whiteLabelLine: '#fbbf24', // amber
+      netRevenue: '#3b82f6',
+      grossProfit:'#2dd4d4',
+      ebitda:     '#22c55e',
+      growthTickets: '#2dd4d4',
+      growthGmv:     '#3b82f6',
+      growthNet:     '#fbbf24',
+      growthGross:   '#a78bfa',
+      growthEbitda:  '#22c55e',
+      grid:       'rgba(255,255,255,0.06)',
+      text:       '#9aa4b2',
+      textBright: '#e6ebf0'
+    };
+
+    function currentLang() {
+      try {
+        const saved = localStorage.getItem('veb_lang');
+        if (saved === 'en' || saved === 'pt') return saved;
+      } catch(e) {}
+      return 'es';
+    }
+
+    // Shared chart defaults
+    Chart.defaults.color = COLORS.text;
+    Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+    Chart.defaults.font.size = 11;
+
+    const YEARS = ['2024', '2025', '2026'];
+    const GROWTH_YEARS = ['2025', '2026'];
+
+    function baseOptions(yAxisTitle, opts) {
+      opts = opts || {};
+      return {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            position: 'top',
+            align: 'end',
+            labels: {
+              boxWidth: 12,
+              boxHeight: 12,
+              padding: 14,
+              font: { size: 11, weight: '600' }
+            }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(11,16,23,0.95)',
+            titleColor: '#fff',
+            bodyColor: '#e6ebf0',
+            borderColor: '#2dd4d4',
+            borderWidth: 1,
+            padding: 10,
+            cornerRadius: 8,
+            callbacks: opts.tooltipCallbacks || {}
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: COLORS.grid, display: false },
+            ticks: { color: COLORS.textBright, font: { weight: '600', size: 12 } }
+          },
+          y: {
+            stacked: opts.stacked || false,
+            beginAtZero: true,
+            grid: { color: COLORS.grid },
+            ticks: { color: COLORS.text, callback: opts.yTickFmt || (v => v) },
+            title: { display: !!yAxisTitle, text: yAxisTitle, color: COLORS.text, font: { size: 11 } }
+          }
+        }
+      };
+    }
+
+    const charts = {};
+
+    // ===== Chart 1: # Tickets stacked bar =====
+    function buildTickets(lang) {
+      const L = CHART_LABELS[lang];
+      const ctx = document.getElementById('chartTickets');
+      if (!ctx) return null;
+      const opts = baseOptions(L.millions, { stacked: true });
+      opts.scales.x.stacked = true;
+      opts.scales.y.stacked = true;
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: YEARS,
+          datasets: [
+            { label: L.ota, data: [0.11, 0.10, 0.20], backgroundColor: COLORS.ota, borderRadius: 4, barPercentage: 0.6 },
+            { label: L.whiteLabel, data: [0.38, 0.50, 0.90], backgroundColor: COLORS.whiteLabel, borderRadius: 4, barPercentage: 0.6 }
+          ]
+        },
+        options: opts
+      });
+    }
+
+    // ===== Chart 2: GMV stacked bar =====
+    function buildGmv(lang) {
+      const L = CHART_LABELS[lang];
+      const ctx = document.getElementById('chartGmv');
+      if (!ctx) return null;
+      const opts = baseOptions('USD M', { stacked: true });
+      opts.scales.x.stacked = true;
+      opts.scales.y.stacked = true;
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: YEARS,
+          datasets: [
+            { label: L.ota, data: [4, 4, 6], backgroundColor: COLORS.ota, borderRadius: 4, barPercentage: 0.6 },
+            { label: L.whiteLabel, data: [8, 18, 28], backgroundColor: COLORS.whiteLabel, borderRadius: 4, barPercentage: 0.6 }
+          ]
+        },
+        options: opts
+      });
+    }
+
+    // ===== Chart 3: Average ticket lines =====
+    function buildAvgTicket(lang) {
+      const L = CHART_LABELS[lang];
+      const ctx = document.getElementById('chartAvgTicket');
+      if (!ctx) return null;
+      const opts = baseOptions('USD');
+      return new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: YEARS,
+          datasets: [
+            {
+              label: L.unibus,
+              data: [35, 35, 35],
+              borderColor: COLORS.unibus,
+              backgroundColor: 'rgba(45,212,212,0.15)',
+              tension: 0.25,
+              fill: false,
+              pointRadius: 5,
+              pointHoverRadius: 7,
+              borderWidth: 3
+            },
+            {
+              label: L.whiteLabelShort,
+              data: [20, 35, 30],
+              borderColor: COLORS.whiteLabelLine,
+              backgroundColor: 'rgba(251,191,36,0.15)',
+              tension: 0.25,
+              fill: false,
+              pointRadius: 5,
+              pointHoverRadius: 7,
+              borderWidth: 3
+            }
+          ]
+        },
+        options: opts
+      });
+    }
+
+    // ===== Chart 4: NR, GP, EBITDA grouped bar =====
+    function buildProfitability(lang) {
+      const L = CHART_LABELS[lang];
+      const ctx = document.getElementById('chartProfitability');
+      if (!ctx) return null;
+      const opts = baseOptions('USD M');
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: YEARS,
+          datasets: [
+            { label: L.netRevenue, data: [0.82, 1.38, 2.16], backgroundColor: COLORS.netRevenue, borderRadius: 4 },
+            { label: L.grossProfit, data: [0.72, 1.28, 1.96], backgroundColor: COLORS.grossProfit, borderRadius: 4 },
+            { label: L.ebitda, data: [-0.16, 0.34, 0.56], backgroundColor: COLORS.ebitda, borderRadius: 4 }
+          ]
+        },
+        options: opts
+      });
+    }
+
+    // ===== Chart 5: Growth lines for 2025 & 2026 =====
+    function buildGrowth(lang) {
+      const L = CHART_LABELS[lang];
+      const ctx = document.getElementById('chartGrowth');
+      if (!ctx) return null;
+      const opts = baseOptions('%', {
+        yTickFmt: v => v + '%',
+        tooltipCallbacks: {
+          label: function(ctx) {
+            return ctx.dataset.label + ': ' + ctx.parsed.y + '%';
+          }
+        }
+      });
+      return new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: GROWTH_YEARS,
+          datasets: [
+            { label: L.tickets,     data: [23, 84],  borderColor: COLORS.growthTickets, backgroundColor: 'rgba(45,212,212,0.1)',  tension: 0.3, borderWidth: 3, pointRadius: 6, pointHoverRadius: 8 },
+            { label: L.gmv,         data: [84, 62],  borderColor: COLORS.growthGmv,     backgroundColor: 'rgba(59,130,246,0.1)',  tension: 0.3, borderWidth: 3, pointRadius: 6, pointHoverRadius: 8 },
+            { label: L.netRevenue,  data: [69, 56],  borderColor: COLORS.growthNet,     backgroundColor: 'rgba(251,191,36,0.1)',  tension: 0.3, borderWidth: 3, pointRadius: 6, pointHoverRadius: 8 },
+            { label: L.grossProfit, data: [78, 53],  borderColor: COLORS.growthGross,   backgroundColor: 'rgba(167,139,250,0.1)', tension: 0.3, borderWidth: 3, pointRadius: 6, pointHoverRadius: 8 },
+            { label: L.ebitda,      data: [107, 67], borderColor: COLORS.growthEbitda,  backgroundColor: 'rgba(34,197,94,0.1)',   tension: 0.3, borderWidth: 3, pointRadius: 6, pointHoverRadius: 8 }
+          ]
+        },
+        options: opts
+      });
+    }
+
+    function renderAll() {
+      const lang = currentLang();
+      // Destroy existing
+      Object.values(charts).forEach(c => { if (c) c.destroy(); });
+      charts.tickets       = buildTickets(lang);
+      charts.gmv           = buildGmv(lang);
+      charts.avgTicket     = buildAvgTicket(lang);
+      charts.profitability = buildProfitability(lang);
+      charts.growth        = buildGrowth(lang);
+    }
+
+    // Initial render (deferred so that DOM and Chart.js are ready)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderAll);
+    } else {
+      renderAll();
+    }
+
+    // Re-render on language change
+    document.querySelectorAll('[data-set-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Small delay to let setLanguage update localStorage first
+        setTimeout(renderAll, 30);
+      });
+    });
+  })();
 </script>
 
 </body>
